@@ -32,12 +32,21 @@ export default class MovieCard extends Component {
   render() {
     return (
       <div className="movie-card">
+      <h3>title: {this.props.title}</h3>
+      <h3>IMDBRating: {this.props.IMDBRating}</h3>
+      <h3>genres: {this.props.genres}</h3>
+      <h3>poster: {this.props.poster}</h3>
         {/* which component should receive which props? */}
-        <CardFront />
-        <CardBack />
+        <CardFront poster={this.props.poster}/>
+        <CardBack title={this.props.title} IMDBRating={this.props.IMDBRating} genres={this.props.genres}  />
       </div>
     )
   }
 }
 
-// Don't forget your default props!
+MovieCard.defaultProps = {
+  title: 'Unknown',
+  IMDBRating: null,
+  genres: ["No Genre(s) Found"],
+  poster: 'default'
+}
