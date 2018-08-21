@@ -9,6 +9,11 @@ export default class MovieShowcase extends Component {
     return movies;
   }
 
+  // This is the better way to do it.
+  // generateMovieCards = () => {
+  //   return movieData.map((data, idx) => <MovieCard key={idx} {...data} />)
+  // }
+
   render() {
     return (
       <div id="movie-showcase">
