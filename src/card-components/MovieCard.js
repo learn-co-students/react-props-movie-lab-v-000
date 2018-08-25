@@ -41,3 +41,9 @@ export default class MovieCard extends Component {
 }
 
 // Don't forget your default props!
+function defaultProps(props) {
+  return props.title = "Unknown";
+  return props.IMDBRating = null;
+  return props.genres = 'No Genre(s) Found';
+  return props.poster = "default";
+}
