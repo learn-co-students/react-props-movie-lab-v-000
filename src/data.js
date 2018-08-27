@@ -1,3 +1,5 @@
+
+
 const movieData = [
   {
     title: 'Choux and Maru go to Istanbul',
@@ -17,7 +19,7 @@ const movieData = [
     genres: ['thriller', 'romance'],
     poster: 'chromeboi'
   },
-  
+
   {
     title: 'Escape from VIM',
     IMDBRating: 0,
@@ -55,5 +57,7 @@ const movieData = [
     poster: 'the-trash-man'
   },
 ]
+
+
 
 export default movieData
