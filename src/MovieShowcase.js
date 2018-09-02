@@ -5,7 +5,9 @@ import movieData from './data.js'
 export default class MovieShowcase extends Component {
 
   generateMovieCards = () => {
-    // map over your movieData array and return the correct 
+    // map over your movieData array and return the correct
+    // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax
+    return movieData.map((mdata, index) => <MovieCard key={index} {...mdata} /> );  
   }
 
   render() {
@@ -16,3 +18,4 @@ export default class MovieShowcase extends Component {
     )
   }
 }
+
