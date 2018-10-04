@@ -34,7 +34,7 @@ export default class MovieCard extends Component {
 
     return (
       <div className="movie-card">
-        <CardFront backgroundImage={posterMap[this.props.poster]} />
+        <CardFront poster={posterMap[this.props.poster]} />
         <CardBack />
       </div>
     )
