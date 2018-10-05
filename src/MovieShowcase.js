@@ -6,12 +6,11 @@ export default class MovieShowcase extends Component {
 
   generateMovieCards = () => {
     // map over your movieData array and return the correct
-    var num = 0
+
     movieData.map(function (movie) {
       return (
-        <MovieCard index=num />
+        <MovieCard index={movie.id} />
       )
-      num += 1
     })
   }
 
