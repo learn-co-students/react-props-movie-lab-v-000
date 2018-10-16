@@ -33,15 +33,11 @@ Following is the component tree. When fully rendered, there are **9**
 associated with the movies we want to display. This data is located in
 `src/data.js` and is already being imported.
 
-`MovieCard` components (which showcase a single movie) receive their individual
-movie information from `MovieShowcase` as four props: `title`, `IMDBRating`,
-`genres`, and `poster`. Following, the props are passed again to either
-`CardFront` or `CardBack`.
+`MovieCard` components (which showcase a single movie) receive their individual movie information from `MovieShowcase` as four props: `title`, `IMDBRating`, `genres`, and `poster`. Following, the props are passed again to either `CardFront` or `CardBack`.
 
 In our movie data set, we occasionally have missing data. This is where
 `defaultProps` come in and really pull our buns out of the fire. We will be
-handling all of our `defaultProp`'ing in `MovieCard` before they are passed down
-the chain to the front and back components.
+handling all of our `defaultProp`'ing in `MovieCard` before they are passed down the chain to the front and back components.
 
 ## Deliverables
 
