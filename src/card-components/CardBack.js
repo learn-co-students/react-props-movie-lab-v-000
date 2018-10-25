@@ -11,12 +11,12 @@ const imgMapper = {0: zero, 1: one, 2: two, 3: three, 4: four, 5: five}
 export default class CardBack extends Component {
 
   generateRatingElement = () => {
-    if(this.props.rating === null) {
+    if(this.props.IMDBRating === null) {
       return (
         <h4>No Rating Found</h4>
       )
     } else {
-      return (<img src={imgMapper[this.props.rating]} alt="" />)
+      return (<img src={imgMapper[this.props.IMDBRating]} alt="" />)
     }
   }
 
@@ -25,9 +25,9 @@ export default class CardBack extends Component {
       <div className="card-back">
         <h3 className="title">{this.props.title}</h3>
         <span />
-          {generateRatingElement()}
+          {this.generateRatingElement()}
         <span />
-        <h5 className="genres">{this.props.genre}</h5>
+        <h5 className="genres">{this.props.genres.join(', ')}</h5>
       </div>
     )
   }
