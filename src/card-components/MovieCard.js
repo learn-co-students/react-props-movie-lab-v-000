@@ -13,7 +13,7 @@ import React, { Component } from 'react';
 import CardFront from './CardFront.js';
 import CardBack from './CardBack.js';
 
-
+// eslint-disable-next-line 
 const posterMap = {
   'choux-maru-istanbul': cmi,
   'choux-maru-part-1': cmp1,
@@ -32,8 +32,8 @@ export default class MovieCard extends Component {
   render() {
     return (
       <div className="movie-card">
-        <CardFront poster={this.poster}/>
-        <CardBack genres={this.genres} title={this.title} IMDBRating={this.IMDBRating} />
+        <CardFront />
+        <CardBack  />
       </div>
     )
   }
