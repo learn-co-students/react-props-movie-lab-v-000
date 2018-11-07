@@ -24,7 +24,7 @@ export default class CardBack extends Component {
         <span />
         {this.generateRatingElement()}
         <span />
-        <h5 className="genres">{this.props.genres.join(", ")}</h5>
+        <h3 className="genres">{this.props.genres.join(", ")}</h3>
       </div>
     )
   }
