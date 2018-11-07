@@ -14,14 +14,14 @@ export default class CardBack extends Component {
     //console.log(rating);
     // implement meeeee! See the readme for instructions
     if (rating === null){
-      return <h4>No Rating Found</h4>
+      return <h4>No Rating Found</h4>;
     } else {
       return <img src={imgMapper[this.props.rating]} alt="" />
     }
   }
 
   render() {
-    console.log(this.props);
+    //console.log(this.props);
     return (
       <div className="card-back">
         <h3 className="title">{this.props.title}</h3>
