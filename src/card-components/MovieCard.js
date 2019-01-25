@@ -32,7 +32,7 @@ export default class MovieCard extends Component {
   render() {
     return (
       <div className="movie-card">
-        <CardFront backgroundImage= '../assets/poster-imgs/choux-and-maru-go-to-istanbul.png'/>
+        <CardFront poster= {posterMap[this.props.poster]}/>
         <CardBack title={this.props.title} IMDBRating={this.props.IMDBRating} genres={this.props.genres}/>
       </div>
     )
