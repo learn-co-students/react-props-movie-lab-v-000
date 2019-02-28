@@ -13,7 +13,7 @@ export default class MovieShowcase extends Component {
 
       return <MovieCard title={movie.title} IMDBRating={movie.IMDBRating} genres={movie.genres} poster={movie.poster} />
     })
-  
+
   render() {
     return (
       <div id="movie-showcase">
