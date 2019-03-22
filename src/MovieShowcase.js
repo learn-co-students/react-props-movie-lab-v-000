@@ -6,12 +6,16 @@ export default class MovieShowcase extends Component {
 
   generateMovieCards = () => {
     // map over your movieData array and return the correct 
-  }
+    Movie_D =  movieData.map(function (data) {
+     return data
+  });
 
   render() {
     return (
       <div id="movie-showcase">
         {this.generateMovieCards()}
+
+  
       </div>
     )
   }
