@@ -12,10 +12,16 @@ export default class CardBack extends Component {
 
   generateRatingElement = () => {
     // implement meeeee! See the readme for instructions
+    
   }
 
   render() {
     return (
+    <div>
+      <div>
+     (IMDBRating === null ? <img src={imgMapper[prop]} alt="" /> : <h4>'No Rating Found'</h4>)
+    </div>
+      
       <div className="card-back">
         <h3 className="title"></h3>
         <span />
@@ -23,6 +29,15 @@ export default class CardBack extends Component {
         <span />
         <h5 className="genres"></h5>
       </div>
+    </div>
     )
   }
+}
+
+CardBack.defaultProps = {
+  title: "",
+  IMDBRating: null,
+  genres: "",
+  poster: "default"
+
 }
