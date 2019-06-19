@@ -36,7 +36,11 @@ body, html, #root {
   transform: scale(1.05)
 }
 
-.movie-card:active {
+input {
+    display: none;
+}
+
+:checked + .movie-card {
   transform: rotateY(180deg) scale(1.05);
 }
 
@@ -55,7 +59,7 @@ body, html, #root {
   transition-duration: 1s;
   box-shadow: 5px 5px 10px;
   box-shadow: 5px 5px 10px rgb(55, 55, 55, 0.85);
-  
+
 }
 
 .card-front:hover {
