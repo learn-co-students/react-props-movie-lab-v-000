@@ -11,8 +11,6 @@ export default class MovieShowcase extends Component {
           IMDBRating={el.IMDBRating}
           genres={el.genres}
           poster={el.poster} />
-        //check the REact docs and talk through what's going on step by step
-        //set instances to movieCard props
       })
     )
   }
