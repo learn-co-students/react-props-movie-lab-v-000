@@ -13,7 +13,6 @@ import React, { Component } from 'react';
 import CardFront from './CardFront.js';
 import CardBack from './CardBack.js';
 
-
 const posterMap = {
   'choux-maru-istanbul': cmi,
   'choux-maru-part-1': cmp1,
@@ -32,7 +31,7 @@ export default class MovieCard extends Component {
   render() {
     return (
       <div className="movie-card">
-        <CardFront style={{backgroundImage: `url(${posterMap[this.props.poster]})`}} /> 
+        <CardFront style={{backgroundImage: `url(${posterMap[this.props.poster]})`}} />
         <CardBack title={this.props.title} 
           IMDBRating={this.generateRatingElement()}
           genres={this.props.genres.join(", ")}
