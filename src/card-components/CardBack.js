@@ -14,11 +14,15 @@ export default class CardBack extends Component {
     if ( this.props.IMDBRating === null ){
       return <h4>No rating found</h4>
     } else {
+      imgMapper.map(function(){
+        //rating from 
+      })
       return <img src={imgMapper[this.props.IMDBRating]} alt="IMDB Rating" />
     };
   }
 
   render() {
+    // debugger
     return (
       <div className="card-back">
         <h3 className="title">
