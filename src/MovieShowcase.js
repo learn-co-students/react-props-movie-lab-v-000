@@ -6,8 +6,13 @@ export default class MovieShowcase extends Component {
 
   generateMovieCards = () => {
     // map over your movieData array and return the correct 
-    const cards = movieData.map((MovieCard) => 
-      <li>{MovieCard}</li>
+    const cards = movieData.map((card) => 
+      <React.Fragment>
+        <MovieCard title={card.title} IMDBRating={card.IMDBRating} genres={card.genres} poster={card.poster}>
+        </MovieCard>
+      </React.Fragment>       
+     
+
       );
       return (
       <ul>{cards}</ul>
@@ -19,6 +24,6 @@ export default class MovieShowcase extends Component {
       <div id="movie-showcase">
         {this.generateMovieCards()}
       </div>
-    )
-  }
+      )
+    }
 }
