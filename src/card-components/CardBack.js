@@ -16,7 +16,7 @@ export default class CardBack extends Component {
             <div><h4>No Rating Found</h4></div>
             );
       } else {
-            return <img src={imgMapper[this.props.poster]} alt="" />
+            return <img src={imgMapper[this.props.IMDBRating]} alt="" />
         }
   }
 
@@ -25,7 +25,7 @@ export default class CardBack extends Component {
       <div className="card-back">
         <h3 className="title">{this.props.title}</h3>
         <span />
-        {this.generateRatingElement()} /* your rating element should go here -- you can invoke methods within JSX, à la: this.myMethod() */ 
+        {this.generateRatingElement()}
         <span />
         <h5 className="genres">{this.props.genres.join(', ')}</h5>
       </div>
