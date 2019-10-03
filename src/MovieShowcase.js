@@ -14,9 +14,6 @@ export default class MovieShowcase extends Component {
     } )
 
 
-
-
-
   render() {
     return (
       <div id="movie-showcase">
