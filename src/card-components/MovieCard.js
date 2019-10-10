@@ -11,7 +11,7 @@ import ttm from '../assets/poster-imgs/the-trash-man.png'
 
 import React, { Component } from 'react';
 import CardFront from './CardFront.js'; // import component because you use it below
-import CardBack from './CardBack.js';
+import CardBack from './CardBack.js'; // ^^
 
 
 const posterMap = {
@@ -28,7 +28,6 @@ const posterMap = {
 }
 
 export default class MovieCard extends Component {
-
   render() {
     return (
       <div className="movie-card">
@@ -47,4 +46,5 @@ MovieCard.defaultProps = {
 
 }
 
-// pass the correct props to the correct back/front components (Note: the posterMap already takes care of converting a string into the appropriate poster asset)
+// pass the correct props to the correct back/front components (Note: the posterMap already
+//takes care of converting a string into the appropriate poster asset)

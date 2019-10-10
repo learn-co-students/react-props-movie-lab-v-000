@@ -4,7 +4,16 @@ import movieData from './data.js' // because you're iterating over it below
 
 export default class MovieShowcase extends Component {
 
-  generateMovieCards = () => { return movieData.map((data) => <MovieCard {...data} />) } // so you gotta import
+  generateMovieCards = () => {
+    return movieData.map((movie) =>
+      <MovieCard
+      title={movie.title}
+      IMDBRating={movie.IMDBRating}
+      genres={movie.genres}
+      poster={movie.poster}
+      />
+    );
+  } // so you gotta import
   // return a movie card for each movie, generate from movie data. not sure what {...date does though}
 
   render() {
