@@ -3,7 +3,11 @@ import MovieCard from "./card-components/MovieCard.js";
 import movieData from "./data.js";
 
 export default class MovieShowcase extends Component {
-  generateMovieCards = () => {
+  render() {
+    return <div id="movie-showcase">{this.generateMovieCards()}</div>;
+  }
+
+  generateMovieCards() {
     return movieData.map(movie => {
       return (
         <MovieCard
@@ -14,11 +18,5 @@ export default class MovieShowcase extends Component {
         />
       );
     });
-  };
-
-  render() {
-    return (
-      <div id="movie-showcase">{this.generateMovieCards()}</div>
-    )
   }
 }
