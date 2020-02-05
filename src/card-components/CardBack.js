@@ -27,3 +27,10 @@ export default class CardBack extends Component {
     )
   }
 }
+
+MovieCard.defaultProps = {
+  title: 'Unknown',
+  IMDBRating: null,
+  poster: 'default',
+  genres: ['No Genre(s) Found']
+}

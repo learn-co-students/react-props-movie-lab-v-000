@@ -39,10 +39,3 @@ export default class MovieCard extends Component {
     )
   }
 }
-
-MovieCard.defaultProps = {
-  title: 'Unknown',
-  IMDBRating: null,
-  poster: 'default',
-  genres: ['No Genre(s) Found']
-}
