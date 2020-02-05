@@ -22,7 +22,7 @@ export default class CardBack extends Component {
         <span />
           <img src={this.generateRatingElement()} alt="" />
         <span />
-        <h5 className="genres">{this.props.genres.toString()}</h5>
+        <h5 className="genres">{this.props.genres.join(", ")}</h5>
       </div>
     )
   }
