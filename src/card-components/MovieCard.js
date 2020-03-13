@@ -28,16 +28,30 @@ const posterMap = {
 }
 
 export default class MovieCard extends Component {
+// iterate over posterMap and to get the right poster based on the props from MovieShowcase and pass it down to CardFront.
+  posterURLS = () => {
+    for (const key in posterMap) {
+      if (key === this.props.poster) {
+        return posterMap[key]
+      }
+    }
+  }
 
   render() {
+    console.log(this.props)
     return (
       <div className="movie-card">
-        {/* which component should receive which props? */}
-        <CardFront />
-        <CardBack />
+        {/* <CardFront poster={this.posterURLS()}/> */}
+        <CardFront poster={posterMap[this.props.poster]} />
+        <CardBack title={this.props.poster} IMDBRating={this.props.IMDBRating} genres={this.props.genres}/>
       </div>
     )
   }
 }
 
-// Don't forget your default props!
+MovieCard.defaultProps = {
+  title: 'Unknown',
+  IMDBRating: null,
+  genres: ['No Genre(s) Found'],
+  poster: 'default'
+}
