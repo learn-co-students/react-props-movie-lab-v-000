@@ -26,18 +26,29 @@ const posterMap = {
   'the-trash-man': ttm,
   'default': defaultPoster
 }
+// the above object contains keys that are movie names, and their values point to the actual image of the poster.
+// to access the image we use this.props.poster to look up the value we want in the posterMap object.
+// for example: to get a a movie's poster image, we look up: posterMap[this.props.poster]
 
 export default class MovieCard extends Component {
 
   render() {
+    // console.log(this.props)
     return (
       <div className="movie-card">
         {/* which component should receive which props? */}
-        <CardFront />
-        <CardBack />
+        <CardFront poster={posterMap[this.props.poster]}/>
+        <CardBack title={this.props.title} IMDBRating={this.props.IMDBRating} genres={this.props.genres} />
       </div>
     )
   }
-}
+};
 
 // Don't forget your default props!
+MovieCard.defaultProps ={
+  title: "unknown",
+  IMDBRating: null,
+  genres: ["No Genre(s) Found"],
+  poster: "default"
+  // or is it posterMap["default"]?
+};
