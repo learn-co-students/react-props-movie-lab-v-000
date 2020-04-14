@@ -1,4 +1,10 @@
 # React Props Movie Lab
+I started to build out another app in this workspace using chess pieces 7 icons...
+I used the Browser Router here:
+https://reacttraining.com/react-router/web/api/BrowserRouter
+...to get this going and I now understand the rest of this workspace so I'm
+moving onto other, more complicated workspaces.
+
 
 ## Objectives
 
@@ -202,12 +208,12 @@ additional information.
 If everything is set up properly in `MovieShowcase`, running the application
 will produce a page with 9 empty squares popping out. These are the nine
 `MovieCard` components being rendered in `MovieShowcase` and if you click one and
-hold your mouse button down, you'll see the card animate and 'turn over.' 
+hold your mouse button down, you'll see the card animate and 'turn over.'
 
 If we were to place `console.log(this.props)` in the `MovieCard` component at
 the beginning of `render()`, we'd see that each `MovieCard` contains different
 props. Your task here is to pass props to the two child components of
-`MovieCard`, `CardFront` and `CardBack`. 
+`MovieCard`, `CardFront` and `CardBack`.
 
 `CardBack` will display the title, genres and IMDB rating. `CardFront` will only
 be used to display the movie poster. `CardFront` should receive a `poster`
@@ -256,7 +262,7 @@ style={{backgroundImage: `url(${prop})`}}
 ###### `CardBack`
 
 In this component, you will need to render the `title`, `genres` and
-`IMDBRating`. 
+`IMDBRating`.
 
 For `genres`, join each genre together into string with commas separating each.
 

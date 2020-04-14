@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import MovieShowcase from './MovieShowcase';
+import App from './App';
 
-ReactDOM.render(<MovieShowcase />, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById('root'));
