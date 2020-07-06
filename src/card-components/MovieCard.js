@@ -30,14 +30,26 @@ const posterMap = {
 export default class MovieCard extends Component {
 
   render() {
+    console.log(this.props)
     return (
       <div className="movie-card">
         {/* which component should receive which props? */}
         <CardFront />
-        <CardBack />
+        <CardBack poster={this.props.poster} title={this.props.title} genres={this.props.genres} IMDBRating={this.props.IMDBRating}/>
       </div>
     )
   }
 }
 
+// typically with react the best way to figure out how to render a prop, is to
+// look at the parent rendering component
+// main ways to give a child props is through the parent component or by setting default props
 // Don't forget your default props!
+// -so to figure out props first check default props and then check the parent, to figure out what kind
+// of data you're working with
+MovieCard.defaultProps = {
+  poster: 'default',
+  title: 'Unknown',
+  IMDBRating: null,
+  genres: ['No Genre(s) Found']
+}
