@@ -2,17 +2,27 @@ import React, { Component } from 'react';
 import MovieCard from './card-components/MovieCard.js'
 import movieData from './data.js'
 
-export default class MovieShowcase extends Component {
+//export default class MovieShowcase extends Component {
 
-  generateMovieCards = () => {
-    // map over your movieData array and return an array of the correct JSX
+/*  generateMovieCards = () => {
+    return movieData.map((data, index) => <MovieCard key={index} {...data} >);
   }
 
   render() {
-    return (
-      <div id="movie-showcase">
-        {this.generateMovieCards()}
-      </div>
-    )
+    (
+     return <div id="movie-showcase">{this.generateMovieCards()}</div>
+    );
   }
 }
+*/
+
+export default class MovieShowcase extends Component {
+  generateMovieCards = () => {
+    return movieData.map((data, idx) => <MovieCard key={idx} {...data} />);
+  };
+
+  render() {
+    return <div id="movie-showcase">{this.generateMovieCards()}</div>;
+  }
+}
+
