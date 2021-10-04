@@ -15,9 +15,10 @@ export default class CardBack extends Component {
   }
 
   render() {
+    const movie = this.props;
     return (
       <div className="card-back">
-        <h3 className="title"></h3>
+        <h3 className="title">{movie.title }</h3>
         <span />
         { /* your rating element should go here -- you can invoke methods within JSX, à la: this.myMethod() */ }
         <span />
